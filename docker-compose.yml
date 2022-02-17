@@ -1,0 +1,13 @@
+version: "3"
+services:
+  mscoco:
+    container_name: mscoco
+    privileged: yes
+    build:
+      context: ./
+    volumes:
+      - ./:/app/src
+      - /dev:/dev
+    working_dir: /app/src
+    # keep aliveの設定
+    tty: true
